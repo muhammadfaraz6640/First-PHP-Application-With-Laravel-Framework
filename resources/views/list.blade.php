@@ -28,6 +28,11 @@
         successfully submitted
     </div>
 @endif
+@if(Session::has('sucmsg'))
+    <div>
+        successfully deleted
+    </div>
+@endif
 <table class="table">
   <thead class="thead-dark">
     <tr>
@@ -49,7 +54,7 @@
       <td>{{ $article->Author }}</td>
       <td>{{ $article->Description }}</td>
       <td>{{ $article->created_at }}</td>
-      <td><a href="#">Delete</a></td>
+      <td><a href='articles/delete/{{ $article->id }}'>Delete</a></td>
       <td><a href="#">Edit</a></td>
     </tr>    
     @endforeach
