@@ -19,6 +19,9 @@ Route::get('/', function () {
 Route::get('articles', 'ArticleController@show');
 Route::get('articles/add', 'ArticleController@Add');
 Route::post('articles/add', 'ArticleController@save');
+Route::get('articles/delete/{id}', 'ArticleController@delete');
+Route::get('articles/edit/{id}', 'ArticleController@edit');
+Route::get('articles/edit/{id}', 'ArticleController@update');
 // Route::get('/sample/{id}', function ($id) { passing data from one page to another
 //     echo $id;
 //     return view('sample');
